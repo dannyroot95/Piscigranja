@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menutemp"
+        android:icon="@mipmap/ic_temp"
+        android:title="Temperatura"/>
+
+    <item android:id="@+id/menuph"
+        android:icon="@mipmap/ic_ph"
+        android:title="Ph"/>
+
+    <item android:id="@+id/menuturb"
+        android:icon="@mipmap/ic_turb"
+        android:title="Turbidez"/>
+
+    <item android:id="@+id/menuoxy"
+        android:icon="@mipmap/ic_oxy"
+        android:title="Oxigeno disuelto"/>
+
+
+</menu>

@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#335e80</item>
+        <item name="colorPrimaryDark">#193952</item>
+        <item name="colorAccent">#193952</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">#193952</item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3a7ca9</item>
+        <item name="fontFamily">@font/allerta</item>
+        <item name="colorPrimaryDark">#3a7ca9</item>
+        <item name="colorAccent">#3a7ca9</item>
+    </style>
+
+    <style name="AppTheme4" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#193952</item>
+        <item name="fontFamily">@font/allerta</item>
+        <item name="colorPrimaryDark">#193952</item>
+        <item name="colorAccent">#193952</item>
+    </style>
+
+    <style name="AppTheme5" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">#FFFF5752</item>
+    <item name="fontFamily">@font/allerta</item>
+    <item name="colorPrimaryDark">#FFFF5752</item>
+    <item name="colorAccent">#FFFF5752</item>
+</style>
+
+    <style name="AppTheme6" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FF07A822</item>
+        <item name="fontFamily">@font/allerta</item>
+        <item name="colorPrimaryDark">#FF07A822</item>
+        <item name="colorAccent">#FF07A822</item>
+    </style>
+
+    <style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogSpotColor">#FFFFFF</item>
+        <item name="android:background">#193952</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+
+    <style name="DialogCustomStyle" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:background">#193952</item>
+    </style>
+
+    <style name="MyAlertDialogData" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#02c7e6</item>
+    </style>
+
+    <!-- creamos un nuevo estilo con el siguiente código , hacemos el llamado del xml (splashcreen) -->
+    <style name="splashScreenTheme" parent="@style/AppTheme2">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+    <style name="MyPopupOtherStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- Used for the background -->
+        <item name="android:background">@drawable/click</item>
+
+    </style>
+
+</resources>

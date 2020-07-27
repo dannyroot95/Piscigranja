@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.piscigranja">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".GetData.getDataOxy"></activity>
+        <activity android:name=".GetData.getDataTurbidez" />
+        <activity android:name=".GetData.getDataPh" />
+        <activity android:name=".Graficos.Barras.barrasOxy" />
+        <activity android:name=".Graficos.Barras.barrasTurbidez" />
+        <activity android:name=".Graficos.Barras.barrasPh" />
+        <activity android:name=".Graficos.Barras.barrasTemp" />
+        <activity android:name=".Graficos.graficoOxy" />
+        <activity android:name=".Graficos.graficoTurbidez" />
+        <activity android:name=".Graficos.graficoPh" />
+        <activity android:name=".Graficos.graficoTemp" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Maps.MapsIot"
+            android:label="@string/title_activity_maps_iot" />
+        <activity android:name=".GetData.getDataFood" />
+        <activity android:name=".Activities.resetPassword" />
+        <activity
+            android:name=".Slider.introActivity"
+            android:theme="@style/splashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Servicios.serviceNotificacion"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".BootAndReinstall.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootAndReinstall.replacePackageReceiver">
+            <intent-filter>
+            <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    </receiver>
+
+
+
+        <activity android:name=".Activities.numSerieIot" />
+        <activity android:name=".Activities.login" />
+        <activity android:name=".Activities.Succesfull" />
+        <activity android:name=".Activities.authLogin" />
+        <activity android:name=".Activities.registro" />
+        <activity android:name=".GetData.getDataTemp" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <uses-library android:name="org.apache.http.legacy"
+            android:required="false"/>
+    </application>
+
+</manifest>
