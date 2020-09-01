@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.piscigranja.R;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -68,9 +69,12 @@ public class MapsIot extends FragmentActivity implements OnMapReadyCallback {
                                 double lati = Double.valueOf(lat);
                                 double longi= Double.valueOf(lon);
                                 LatLng iot = new LatLng(lati, longi);
-                                mMap.addMarker(new MarkerOptions().position(iot).title("Dispositivo IoT").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_google_markerfish)));
+                                mMap.addMarker(new MarkerOptions().position(iot).title("Dispositivo IoT").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_google_markerfish))).showInfoWindow();
                                 mMap.moveCamera(CameraUpdateFactory.newLatLng(iot));
-                                mMap.animateCamera( CameraUpdateFactory.zoomTo( 17.0f ) );
+                                CameraUpdate tuLocation = CameraUpdateFactory.newLatLngZoom(iot, 16);
+                                mMap.animateCamera(tuLocation);
+                                //mMap.animateCamera( CameraUpdateFactory.zoomTo( 14.0f ) );
+
                                 mDialogActualizeData.dismiss();
                             }
 

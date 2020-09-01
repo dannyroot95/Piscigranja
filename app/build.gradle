@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.PhilJay:MPAndroidChart:v2.0.9'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.android.support:support-compat:28.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.kbeanie:multipicker:1.5'
