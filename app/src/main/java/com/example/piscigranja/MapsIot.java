@@ -19,6 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class MapsIot extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -33,7 +35,7 @@ public class MapsIot extends FragmentActivity implements OnMapReadyCallback {
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+        Objects.requireNonNull(mapFragment).getMapAsync(this);
         mAuth = FirebaseAuth.getInstance();
         mDatabaseSerie = FirebaseDatabase.getInstance().getReference();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -66,9 +68,9 @@ public class MapsIot extends FragmentActivity implements OnMapReadyCallback {
                                 double lati = Double.valueOf(lat);
                                 double longi= Double.valueOf(lon);
                                 LatLng iot = new LatLng(lati, longi);
-                                mMap.addMarker(new MarkerOptions().position(iot).title("Dispositivo IoT").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_google_markerfish)));
+                                mMap.addMarker(new MarkerOptions().position(iot).title("Mi dispositivo").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_google_markerfish)));
                                 mMap.moveCamera(CameraUpdateFactory.newLatLng(iot));
-                                mMap.animateCamera( CameraUpdateFactory.zoomTo( 17.0f ) );
+                                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom( iot,13) );
                                 mDialogActualizeData.dismiss();
                             }
 

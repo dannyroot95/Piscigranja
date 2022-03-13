@@ -137,7 +137,7 @@ public class graficoOxy extends AppCompatActivity {
                             error.printStackTrace();
                             mDialog.dismiss();
                             finish();
-                            Toast.makeText(graficoOxy.this , "Error , añada su dispositivo" ,Toast.LENGTH_LONG).show();
+                            Toast.makeText(graficoOxy.this , "Muy pronto..." ,Toast.LENGTH_LONG).show();
                         }
                     });
 

@@ -119,7 +119,9 @@ public class registro extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task2) {
 
                             if(task2.isSuccessful()){
-                                verficarUser();
+                                startActivity(new Intent(registro.this,Succesfull.class));
+                                startService(new Intent(registro.this,serviceNotificacion.class));
+                                finish();
                             }
                             else {
                                 mDialog2.dismiss();

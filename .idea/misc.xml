@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Danny/Desktop/Folders/Backup de proyectos/Piscigranja/app/src/main/res/layout/activity_get_data_oxy.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/Danny/Desktop/Folders/Backup de proyectos/Piscigranja/app/src/main/res/layout/activity_get_data_ph.xml" value="0.16197916666666667" />
         <entry key="..\:/Users/Danny/Desktop/Folders/Backup de proyectos/Piscigranja/app/src/main/res/layout/activity_main.xml" value="0.2009043927648579" />
         <entry key="..\:/Users/Danny/Desktop/Folders/Backup de proyectos/Piscigranja/app/src/main/res/layout/activity_succesfull.xml" value="0.2" />
+        <entry key="..\:/Users/Danny/Desktop/Folders/Backup de proyectos/Piscigranja/app/src/main/res/menu/graficos.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/Danny/Desktop/Folders/Backup de proyectos/Piscigranja/app/src/main/res/menu/popup_menu.xml" value="0.16197916666666667" />
       </map>
     </option>
   </component>

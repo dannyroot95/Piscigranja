@@ -11,6 +11,7 @@
         android:title="Ph"/>
 
     <item android:id="@+id/menuturb"
+        android:visible="false"
         android:icon="@mipmap/ic_turb"
         android:title="Turbidez"/>
 

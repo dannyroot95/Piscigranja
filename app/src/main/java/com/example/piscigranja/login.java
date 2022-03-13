@@ -104,15 +104,9 @@ public class login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if(task.isSuccessful()){
-                    if(user.isEmailVerified()){
-                        startActivity(new Intent(login.this,Succesfull.class));
-                        startService(new Intent(login.this,serviceNotificacion.class));
-                        finish();
-                    }
-                    else {
-                        mDialog.dismiss();
-                        alertaCorreo();
-                    }
+                    startActivity(new Intent(login.this,Succesfull.class));
+                    //startService(new Intent(login.this,serviceNotificacion.class));
+                    finish();
                 }
                 else
                 {
@@ -129,7 +123,7 @@ public class login extends AppCompatActivity {
     protected void onStart() {
         FirebaseUser user = mAuth.getCurrentUser();
         super.onStart();
-        if (mAuth.getCurrentUser() != null && user.isEmailVerified()){
+        if (mAuth.getCurrentUser() != null){
             startActivity(new Intent(login.this,Succesfull.class));
             finish();
         }

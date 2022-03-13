@@ -45,7 +45,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Succesfull extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    private Button  btnDatafood,btnDataMap,btnaddSerie;
+    private Button  btnDataMap,btnaddSerie;
     private CircleImageView foto;
     private FirebaseAuth mAuth , exitAuth;
     private DatabaseReference mDatabase;
@@ -53,7 +53,7 @@ public class Succesfull extends AppCompatActivity implements PopupMenu.OnMenuIte
     private StorageReference mStorage;
     private static final int GALLERY = 1;
     private ProgressDialog mDialog,mDialogActualizeData;
-    private LottieAnimationView btnDataTemp,btnDataoxy,btnDataPh,btnDataTurb;
+    private LottieAnimationView btnDataTemp,btnDataoxy,btnDataPh;
     String txtActualizeName;
 
 
@@ -78,10 +78,8 @@ public class Succesfull extends AppCompatActivity implements PopupMenu.OnMenuIte
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
         btnDataTemp = (LottieAnimationView) findViewById(R.id.btnDataTemp);
-        btnDatafood = (Button) findViewById(R.id.btnDataFood);
         btnDataMap = (Button) findViewById(R.id.btnDataMap);
         btnDataPh = (LottieAnimationView) findViewById(R.id.btnDataPh);
-        btnDataTurb = (LottieAnimationView) findViewById(R.id.btnDataTurb);
         btnDataoxy = (LottieAnimationView) findViewById(R.id.btnDataOxy);
         nombres_txt = (TextView) findViewById(R.id.txtNombres);
         email_txt = (TextView) findViewById(R.id.txtEmail);
@@ -91,14 +89,6 @@ public class Succesfull extends AppCompatActivity implements PopupMenu.OnMenuIte
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.gota);
 
-
-        btnDatafood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mediaPlayer.start();
-                startActivity(new Intent(Succesfull.this, getDataFood.class));
-            }
-        });
 
         btnDataTemp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,14 +105,6 @@ public class Succesfull extends AppCompatActivity implements PopupMenu.OnMenuIte
             public void onClick(View v) {
                 mediaPlayer.start();
                 startActivity(new Intent(Succesfull.this, getDataPh.class));
-            }
-        });
-
-        btnDataTurb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mediaPlayer.start();
-                startActivity(new Intent(Succesfull.this, getDataTurbidez.class));
             }
         });
 
@@ -284,7 +266,7 @@ public class Succesfull extends AppCompatActivity implements PopupMenu.OnMenuIte
                 return true;
             case R.id.item3:
                 exitAuth.signOut();
-                stopService(new Intent(Succesfull.this,serviceNotificacion.class));
+                //stopService(new Intent(Succesfull.this,serviceNotificacion.class));
                 startActivity(new Intent(Succesfull.this,login.class));
                 finish();
                 return true;

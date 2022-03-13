@@ -135,7 +135,7 @@ public class graficoPh extends AppCompatActivity {
                             error.printStackTrace();
                             mDialog.dismiss();
                             finish();
-                            Toast.makeText(graficoPh.this , "Error , añada su dispositivo" ,Toast.LENGTH_LONG).show();
+                            Toast.makeText(graficoPh.this , "Muy pronto..." ,Toast.LENGTH_LONG).show();
                         }
                     });
 
